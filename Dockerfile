@@ -9,4 +9,7 @@ COPY . /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+# Expose port for Chainlit UI
+EXPOSE 8080
+
 CMD ["python3", "chainlit", "run", "app.py"]
