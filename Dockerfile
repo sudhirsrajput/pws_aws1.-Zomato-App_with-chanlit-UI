@@ -8,12 +8,9 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Copy your application's requirements and install them
-COPY requirements.txt /app/
+COPY . /app
 
-RUN pip install -r /app/requirements.txt
-
-# Copy your application code into the container
-COPY . /app/
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
